@@ -1,0 +1,55 @@
+spring:
+  config:
+    import: classpath:.env.properties
+
+  application:
+    name: FinSight
+
+  datasource:
+    # DB connection with utf8mb4
+    url: ${SPRING_DATASOURCE_URL}
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
+  jpa:
+    # Hibernate dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+    # Auto update schema
+    hibernate:
+      ddl-auto: update
+
+    # Ensure Hibernate creates tables with utf8mb4 for working with emojis
+    properties:
+      hibernate:
+        connection:
+          characterEncoding: utf8mb4
+          useUnicode: true
+          CharSet: utf8mb4
+          collation: utf8mb4_unicode_ci
+
+  # Mail properties
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+# User properties
+password:
+  reset:
+    url: http://localhost:5173/reset-password
+    expiryInMinutes: 5
+
+server:
+  port: ${PORT:9000}
+
+jwt:
+  secret_key: ${JWT_SECRET_KEY}

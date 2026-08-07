@@ -1,0 +1,22 @@
+services:
+  backend:
+    build: ./server
+    container_name: cashlens_server
+    restart: always
+    env_file:
+      - server/src/main/resources/.env.properties
+    ports:
+      - "9000:9000"
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.prod
+    container_name: cashlens_client
+    restart: always
+    env_file:
+      - client/.env
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"

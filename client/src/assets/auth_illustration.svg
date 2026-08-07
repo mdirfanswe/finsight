@@ -1,0 +1,115 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circles -->
+  <circle cx="100" cy="100" r="150" fill="url(#grad2)" opacity="0.3">
+    <animate attributeName="r" values="150;170;150" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="400" cy="400" r="180" fill="url(#grad3)" opacity="0.3">
+    <animate attributeName="r" values="180;200;180" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Main illustration container -->
+  <g transform="translate(250, 250)">
+    <!-- Piggy bank body -->
+    <ellipse cx="0" cy="10" rx="100" ry="85" fill="url(#grad1)" opacity="0.9">
+      <animate attributeName="ry" values="85;88;85" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Piggy bank shadow -->
+    <ellipse cx="0" cy="95" rx="90" ry="15" fill="#000" opacity="0.1"/>
+    
+    <!-- Coin slot -->
+    <rect x="-25" y="-40" width="50" height="8" rx="4" fill="#fff" opacity="0.9"/>
+    
+    <!-- Eye 1 -->
+    <circle cx="-30" cy="-10" r="8" fill="#fff"/>
+    <circle cx="-28" cy="-10" r="5" fill="#1a1a1a"/>
+    
+    <!-- Eye 2 -->
+    <circle cx="30" cy="-10" r="8" fill="#fff"/>
+    <circle cx="32" cy="-10" r="5" fill="#1a1a1a"/>
+    
+    <!-- Snout -->
+    <ellipse cx="0" cy="15" rx="35" ry="25" fill="#FF6B6B" opacity="0.6"/>
+    <circle cx="-10" cy="15" r="6" fill="#1a1a1a" opacity="0.4"/>
+    <circle cx="10" cy="15" r="6" fill="#1a1a1a" opacity="0.4"/>
+    
+    <!-- Ear 1 -->
+    <ellipse cx="-70" cy="-35" rx="25" ry="35" fill="url(#grad1)" opacity="0.8" transform="rotate(-30 -70 -35)"/>
+    
+    <!-- Ear 2 -->
+    <ellipse cx="70" cy="-35" rx="25" ry="35" fill="url(#grad1)" opacity="0.8" transform="rotate(30 70 -35)"/>
+    
+    <!-- Legs -->
+    <rect x="-60" y="70" width="20" height="35" rx="10" fill="url(#grad1)" opacity="0.7"/>
+    <rect x="-20" y="70" width="20" height="35" rx="10" fill="url(#grad1)" opacity="0.7"/>
+    <rect x="0" y="70" width="20" height="35" rx="10" fill="url(#grad1)" opacity="0.7"/>
+    <rect x="40" y="70" width="20" height="35" rx="10" fill="url(#grad1)" opacity="0.7"/>
+    
+    <!-- Tail -->
+    <path d="M 90 0 Q 120 -20 130 -10 Q 125 0 120 5" stroke="url(#grad1)" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  
+  <!-- Floating coins -->
+  <g opacity="0.8">
+    <!-- Coin 1 -->
+    <circle cx="120" cy="180" r="20" fill="url(#grad1)">
+      <animate attributeName="cy" values="180;160;180" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="120" y="188" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">$</text>
+    
+    <!-- Coin 2 -->
+    <circle cx="380" cy="220" r="18" fill="url(#grad1)">
+      <animate attributeName="cy" values="220;200;220" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="380" y="227" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">$</text>
+    
+    <!-- Coin 3 -->
+    <circle cx="100" cy="320" r="15" fill="url(#grad1)">
+      <animate attributeName="cy" values="320;305;320" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="100" y="326" font-size="15" fill="#fff" text-anchor="middle" font-weight="bold">$</text>
+    
+    <!-- Coin 4 -->
+    <circle cx="390" cy="340" r="22" fill="url(#grad1)">
+      <animate attributeName="cy" values="340;320;340" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="390" y="349" font-size="22" fill="#fff" text-anchor="middle" font-weight="bold">$</text>
+  </g>
+  
+  <!-- Chart bars in background -->
+  <g opacity="0.3" transform="translate(50, 400)">
+    <rect x="0" y="-40" width="15" height="40" fill="url(#grad1)" rx="3"/>
+    <rect x="20" y="-60" width="15" height="60" fill="url(#grad1)" rx="3"/>
+    <rect x="40" y="-35" width="15" height="35" fill="url(#grad1)" rx="3"/>
+    <rect x="60" y="-70" width="15" height="70" fill="url(#grad1)" rx="3"/>
+    <rect x="80" y="-50" width="15" height="50" fill="url(#grad1)" rx="3"/>
+  </g>
+  
+  <!-- Sparkles -->
+  <g opacity="0.6">
+    <path d="M 150 120 L 153 128 L 161 131 L 153 134 L 150 142 L 147 134 L 139 131 L 147 128 Z" fill="url(#grad1)">
+      <animateTransform attributeName="transform" type="rotate" values="0 150 131; 360 150 131" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 360 150 L 362 156 L 368 158 L 362 160 L 360 166 L 358 160 L 352 158 L 358 156 Z" fill="url(#grad1)">
+      <animateTransform attributeName="transform" type="rotate" values="0 360 158; 360 360 158" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 320 380 L 322 385 L 327 387 L 322 389 L 320 394 L 318 389 L 313 387 L 318 385 Z" fill="url(#grad1)">
+      <animateTransform attributeName="transform" type="rotate" values="0 320 387; 360 320 387" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>
