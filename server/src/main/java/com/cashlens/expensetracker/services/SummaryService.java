@@ -69,6 +69,7 @@ public class SummaryService {
 
         while (incomePointer < incomeList.size() && count > 0) {
             transactionList.add(incomeList.get(incomePointer));
+            incomePointer++;
             count--;
         }
 
